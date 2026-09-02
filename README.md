@@ -11,6 +11,7 @@
   <a href="https://www.pinecone.io/"><img src="https://img.shields.io/badge/Vector%20Store-Pinecone%20Serverless-000000.svg?logo=pinecone&logoColor=white" alt="Pinecone" /></a>
   <a href="https://www.mysql.com/"><img src="https://img.shields.io/badge/Database-MySQL%208.0%20%2F%20SQLite-4479A1.svg?logo=mysql&logoColor=white" alt="Database" /></a>
   <a href="https://kubernetes.io/"><img src="https://img.shields.io/badge/Kubernetes-AWS%20EKS-326CE5.svg?logo=kubernetes&logoColor=white" alt="Kubernetes" /></a>
+  <a href="https://github.com/bittush8789/enterprise-banking-fde-rag/actions"><img src="https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-2088FF.svg?logo=githubactions&logoColor=white" alt="GitHub Actions" /></a>
   <a href="https://docs.pytest.org/"><img src="https://img.shields.io/badge/Tests-15%2F15%20Passed%20(100%25)-4CAF50.svg?logo=pytest&logoColor=white" alt="Pytest" /></a>
   <a href="./LICENSE"><img src="https://img.shields.io/badge/License-Proprietary%20%2F%20Enterprise-blue.svg" alt="License" /></a>
 </p>

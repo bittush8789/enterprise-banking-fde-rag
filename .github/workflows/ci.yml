@@ -1,0 +1,48 @@
+name: CI - BankAssist AI Test & Quality Suite
+
+on:
+  push:
+    branches: [ "main", "pinecone" ]
+  pull_request:
+    branches: [ "main", "pinecone" ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Automated Unit & Integration Tests
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: "pip"
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r backend/requirements.txt
+          pip install pytest pytest-cov flake8
+
+      - name: Run Python Linting & Syntax Checks
+        run: |
+          # Stop the build if there are Python syntax errors or undefined names
+          flake8 backend/ --count --select=E9,F63,F7,F82 --show-source --statistics
+          # Exit-zero treats all errors as warnings
+          flake8 backend/ --count --exit-zero --max-complexity=15 --max-line-length=127 --statistics
+
+      - name: Run Pytest Test Suite
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY || 'mock_test_key' }}
+          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY || '' }}
+          JWT_SECRET_KEY: "test_secret_key_for_github_actions_ci_pipeline"
+          DATABASE_URL: "sqlite:///./data/test.db"
+        run: |
+          pytest tests/ -v --color=yes
