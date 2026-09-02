@@ -1,0 +1,39 @@
+# APEX GLOBAL BANK — DIGITAL FRAUD DEFENSE & CUSTOMER ZERO-LIABILITY MANDATE (2026)
+Document ID: DOC-POL-CYBER-007
+Classification: Public / Regulatory Compliance
+Department: Fraud Risk Management & Cyber Security Cell
+Version: v4.0 (Effective 2026)
+
+---
+
+## 1. CUSTOMER LIABILITY MATRIX FOR UNAUTHORIZED ELECTRONIC TRANSACTIONS
+Section 1.1 Zero Liability Conditions (Full Reversal):
+A customer has ZERO liability in the following events:
+1. Contributory fraud, negligence, or deficiency on the part of the bank (whether reported by the customer or not).
+2. Third-party breach where the deficiency lies neither with the bank nor with the customer, provided the customer notifies the bank within 3 calendar days of receiving the SMS/email alert.
+
+Section 1.2 Limited Customer Liability (Delayed Reporting):
+Where the breach is due to a third-party hack and the customer reports between 4 to 7 calendar days after receiving the alert:
+- Basic Savings / PMJDY Accounts: Maximum customer liability is capped at $50 (INR 3,500).
+- Standard Savings Accounts, Credit Cards with limit <= $5,000: Capped at $100 (INR 7,000).
+- Current Accounts, Corporate Accounts, Infinite Credit Cards: Capped at $250 (INR 17,500).
+
+Section 1.3 Customer Negligence (PIN / OTP Disclosure):
+- In cases where the loss is due to customer negligence (such as sharing OTP, ATM PIN, UPI PIN, or NetBanking passwords with fraudsters):
+  - The customer bears the entire loss until the customer reports the unauthorized transaction to the bank.
+  - Any loss occurring AFTER reporting the breach to the bank is borne 100% by the bank.
+
+## 2. SHADOW MONITORING, COOLING PERIODS & TRANSACTION LOCKS
+Section 2.1 Beneficiary Addition Cooling Period:
+- Newly added electronic payees (NEFT/RTGS/IMPS/Wire) are subject to a mandatory 4-hour cooling window during which transfers are restricted.
+- Maximum cumulative transfer amount in the first 24 hours of beneficiary activation is capped at $1,000 (INR 50,000).
+
+Section 2.2 Instant Account Freeze Protocol:
+- If suspicious anomalous activity is detected by the AI anti-fraud engine:
+  - The account channel (Debit card / UPI / Internet Banking) is placed in soft-lock mode.
+  - Instant notification is dispatched to the registered mobile number.
+  - Customers can instantly freeze or unfreeze accounts via the 24x7 Cyber Helpline (1930) or the mobile banking 'Kill Switch'.
+
+## 3. PROVISIONAL CREDIT & SHADOW LOSS RESTITUTION
+- Shadow Credit Timeline: When a zero-liability or limited-liability dispute is registered, the bank credits the disputed amount to the customer's operative account within 10 working days of notification.
+- Final Dispute Settlement: The grievance redressal committee must resolve the case within 90 days of receipt.

@@ -1,0 +1,51 @@
+# APEX GLOBAL BANK — HOME LOAN POLICY & UNDERWRITING GUIDELINES (2026)
+Document ID: DOC-POL-LOAN-001
+Classification: Confidential - Internal Banking Use Only
+Department: Retail Lending & Credit Underwriting
+Version: v2.4 (Effective January 2026)
+Authorized Personnel: Loan Officers, Credit Managers, Branch Managers, Executive Underwriters
+
+---
+
+## 1. OBJECTIVE AND SCOPE
+This document outlines the operational criteria, eligibility prerequisites, collateral valuations, and documentation mandatory for sanctioning residential housing loans across all Apex Global Bank branches.
+
+## 2. BORROWER ELIGIBILITY CRITERIA
+1. Age Limits:
+   - Salaried Applicants: Minimum 21 years at loan application; Maximum 60 years or superannuation age at loan maturity.
+   - Self-Employed / Business Owners: Minimum 25 years at loan application; Maximum 65 years at loan maturity.
+2. Minimum Income Thresholds:
+   - Metro Areas: Net monthly salaried income >= $4,500 (or INR 75,000).
+   - Non-Metro Areas: Net monthly salaried income >= $3,000 (or INR 50,000).
+   - Self-Employed: Minimum audited annual net profit >= $50,000 (or INR 8,00,000) for the preceding 2 financial years.
+3. Credit Score (CIBIL / Experian):
+   - Prime Rate Tier: CIBIL Score >= 780 qualifies for the baseline interest rate (8.40% p.a.).
+   - Standard Tier: CIBIL Score between 720 and 779 incurs a 25 bps spread (8.65% p.a.).
+   - Sub-Standard / High Risk: CIBIL Score below 700 requires mandatory Zonal Head credit risk approval and an additional 75 bps risk premium. Scores below 650 are rejected automatically.
+
+## 3. LOAN-TO-VALUE (LTV) AND MAXIMUM QUANTUM
+1. Up to $40,000 (or INR 30 Lakhs): Maximum LTV of 90% of the registered property valuation.
+2. $40,001 to $100,000 (INR 30 Lakhs to 75 Lakhs): Maximum LTV of 80%.
+3. Above $100,000 (Above INR 75 Lakhs): Maximum LTV of 75%.
+4. Maximum Tenure: 30 years (360 months) or retirement age, whichever is earlier.
+5. Fixed Obligations to Income Ratio (FOIR): Maximum permissible FOIR is capped at 55% of net monthly income (including proposed EMI).
+
+## 4. MANDATORY DOCUMENTATION CHECKLIST
+Section 4.1 KYC & Identity Verification:
+- Valid Government Photo ID: PAN Card (Mandatory for tax validation) and Aadhaar / Passport.
+- Current Residential Address Proof: Electricity bill (within 60 days), registered lease agreement, or passport.
+
+Section 4.2 Financial Proofs (Salaried):
+- Salary slips for the preceding 3 consecutive months with corporate seal.
+- Form 16 / W2 for the last 2 assessment years.
+- Operative salary bank account statements for the preceding 6 months showing salary credits.
+
+Section 4.3 Property & Legal Title Documents:
+- Registered Sale Agreement / Builder Allotment Letter.
+- Chain of Title Deeds establishing undisputed ownership for the previous 30 years.
+- Non-Encumbrance Certificate (EC) issued by the Sub-Registrar for the past 13 years.
+- Approved Building Plan sanctioned by municipal or urban development authorities.
+
+## 5. FEES, CHARGES & PREPAYMENT
+- Processing Fee: 0.50% of the sanctioned loan amount, subject to a minimum of $250 and maximum of $1,500 + statutory taxes.
+- Prepayment / Foreclosure Charges: Nil (0%) for individual floating-rate home loans per Central Bank regulations. Fixed-rate commercial loans incur a 2.0% foreclosure charge if settled within 36 months.

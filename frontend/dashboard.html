@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BankAssist AI — Enterprise Banking Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <script>
+    const savedTheme = localStorage.getItem('bankassist_theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+<body>
+  <div class="chat-app">
+    <!-- Full Enterprise Sidebar -->
+    <aside class="chat-sidebar">
+      <!-- Brand Header -->
+      <div class="sidebar-header">
+        <a class="brand-logo" href="/dashboard">
+          <div class="brand-icon">
+            <i class="bi bi-bank2"></i>
+          </div>
+          <span>BankAssist<span class="text-warning">.AI</span></span>
+        </a>
+      </div>
+
+      <!-- Navigation Menu -->
+      <div class="sidebar-body">
+        <button id="new-chat-btn" class="new-chat-btn" onclick="showTab('chat'); ChatApp.startNewChat();">
+          <i class="bi bi-plus-lg"></i>
+          <span>New Chat</span>
+        </button>
+
+        <div class="sidebar-section-title">Navigation</div>
+        <div class="d-flex flex-column gap-1 mb-3">
+          <button class="nav-tab-btn active" id="tab-btn-chat" onclick="showTab('chat')">
+            <i class="bi bi-chat-left-dots"></i>
+            <span>Knowledge Assistant</span>
+          </button>
+          <button class="nav-tab-btn" id="tab-btn-documents" onclick="showTab('documents')">
+            <i class="bi bi-folder2-open"></i>
+            <span>Document Repository</span>
+          </button>
+          <button class="nav-tab-btn" id="tab-btn-users" onclick="showTab('users')">
+            <i class="bi bi-people"></i>
+            <span>User Directory</span>
+          </button>
+          <button class="nav-tab-btn" id="tab-btn-audit" onclick="showTab('audit')">
+            <i class="bi bi-shield-check"></i>
+            <span>Security &amp; Audit Logs</span>
+          </button>
+        </div>
+
+        <div class="sidebar-section-title">Recent Conversations</div>
+        <div id="sessions-list" class="sessions-list">
+          <div class="text-muted small p-2">Loading...</div>
+        </div>
+      </div>
+
+      <!-- Sidebar Footer -->
+      <div class="sidebar-footer">
+        <div class="user-profile">
+          <div id="user-avatar-initials" class="user-avatar">BA</div>
+          <div class="overflow-hidden">
+            <div id="user-display-name" class="user-name">Employee</div>
+            <div id="user-role-badge" class="small text-muted" style="font-size: 0.72rem;">User</div>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-1">
+          <button id="theme-toggle-btn" class="theme-toggle-btn" onclick="toggleTheme()" title="Switch Light/Dark Theme">
+            <i id="theme-icon" class="bi bi-sun"></i>
+          </button>
+          <button class="logout-btn" onclick="Auth.logout()" title="Sign Out">
+            <i class="bi bi-box-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Workspace Area -->
+    <main class="chat-main">
+      <!-- Top Header -->
+      <header class="chat-top-header">
+        <div class="chat-header-title">
+          <i class="bi bi-shield-lock-fill text-warning"></i>
+          <span id="active-tab-title">Banking Knowledge Assistant</span>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <div class="status-indicator">
+            <span class="status-dot"></span>
+            <span>Online &amp; Grounded</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- TAB 1: KNOWLEDGE ASSISTANT CHAT -->
+      <div id="tab-pane-chat" class="tab-pane-content d-flex flex-column h-100">
+        <!-- Message History Container -->
+        <div id="chat-messages-area" class="messages-container">
+          <div class="welcome-screen">
+            <div class="logo-box">
+              <i class="bi bi-bank2"></i>
+            </div>
+            <h3>BankAssist AI Knowledge Assistant</h3>
+            <p>
+              Ask any question regarding loan underwriting, KYC/AML directives, fixed deposit rates, credit cards, or operational banking SOPs.
+            </p>
+            <div id="suggested-questions-container" class="suggestion-grid">
+              <div class="suggestion-pill" onclick="ChatApp.useSuggestion('What are the eligibility criteria for a Home Loan?')">
+                <i class="bi bi-chat-left-dots text-warning"></i>
+                <span>What are the eligibility criteria for a Home Loan?</span>
+              </div>
+              <div class="suggestion-pill" onclick="ChatApp.useSuggestion('What are the KYC requirements for high-risk customers?')">
+                <i class="bi bi-chat-left-dots text-warning"></i>
+                <span>What are the KYC requirements for high-risk customers?</span>
+              </div>
+              <div class="suggestion-pill" onclick="ChatApp.useSuggestion('What is the senior citizen interest rate for Fixed Deposits?')">
+                <i class="bi bi-chat-left-dots text-warning"></i>
+                <span>What is the senior citizen interest rate for Fixed Deposits?</span>
+              </div>
+              <div class="suggestion-pill" onclick="ChatApp.useSuggestion('What is the procedure for reporting an IT security incident?')">
+                <i class="bi bi-chat-left-dots text-warning"></i>
+                <span>What is the procedure for reporting an IT security incident?</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Chat Input Bar -->
+        <div class="chat-bottom-bar">
+          <div class="input-container">
+            <textarea id="chat-input" class="chat-input" placeholder="Ask a banking question (e.g. Home loan eligibility, KYC rules, FD rates, Credit card APR)..." rows="1"></textarea>
+            <button id="chat-send-btn" class="send-btn" title="Send Question">
+              <i class="bi bi-arrow-up-short fs-4"></i>
+            </button>
+          </div>
+          <div class="input-disclaimer">
+            <i class="bi bi-shield-check text-warning me-1"></i>
+            Strictly grounded in 13 approved banking documents. PII is automatically masked.
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: DOCUMENT REPOSITORY -->
+      <div id="tab-pane-documents" class="tab-pane-content d-none p-4 overflow-y-auto">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <div>
+            <h4 class="fw-bold mb-1">Approved Banking Document Repository</h4>
+            <p class="text-muted small mb-0">Manage knowledge documents vectorized in ChromaDB for Retrieval-Augmented Generation.</p>
+          </div>
+          <button class="btn btn-warning text-dark fw-semibold" data-bs-toggle="modal" data-bs-target="#uploadDocumentModal">
+            <i class="bi bi-cloud-upload me-1"></i> Upload Document
+          </button>
+        </div>
+
+        <div class="table-responsive rounded-3 border border-secondary border-opacity-25" style="background: var(--bg-card);">
+          <table class="table table-hover align-middle mb-0">
+            <thead>
+              <tr class="text-muted small">
+                <th>DOCUMENT NAME</th>
+                <th>TYPE</th>
+                <th>DEPARTMENT</th>
+                <th>CLASSIFICATION</th>
+                <th>STATUS</th>
+                <th class="text-end">ACTION</th>
+              </tr>
+            </thead>
+            <tbody id="documents-table-body">
+              <tr><td colspan="6" class="text-center py-4 text-muted">Loading documents...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- TAB 3: USER DIRECTORY -->
+      <div id="tab-pane-users" class="tab-pane-content d-none p-4 overflow-y-auto">
+        <div class="mb-4">
+          <h4 class="fw-bold mb-1">Authorized Banking Staff Directory</h4>
+          <p class="text-muted small mb-0">List of bank staff and assigned organizational roles.</p>
+        </div>
+
+        <div class="table-responsive rounded-3 border border-secondary border-opacity-25" style="background: var(--bg-card);">
+          <table class="table table-hover align-middle mb-0">
+            <thead>
+              <tr class="text-muted small">
+                <th>NAME</th>
+                <th>EMAIL</th>
+                <th>ROLES</th>
+                <th>STATUS</th>
+                <th>CREATED AT</th>
+              </tr>
+            </thead>
+            <tbody id="users-table-body">
+              <tr><td colspan="5" class="text-center py-4 text-muted">Loading users...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- TAB 4: SECURITY DASHBOARD & AUDIT LOGS -->
+      <div id="tab-pane-audit" class="tab-pane-content d-none p-4 overflow-y-auto">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <div>
+            <h4 class="fw-bold mb-1">Zero-Trust Security &amp; Audit Logs</h4>
+            <p class="text-muted small mb-0">Real-time audit trail of user queries, PII redactions, prompt injections, and vector retrievals.</p>
+          </div>
+          <button id="refresh-audit-btn" class="btn btn-outline-secondary btn-sm text-light">
+            <i class="bi bi-arrow-clockwise me-1"></i> Refresh
+          </button>
+        </div>
+
+        <!-- Metrics Cards -->
+        <div class="row g-3 mb-4">
+          <div class="col-md-3">
+            <div class="p-3 rounded-3 border border-secondary border-opacity-25" style="background: var(--bg-card);">
+              <div class="text-muted small fw-bold">TOTAL AUDIT EVENTS</div>
+              <div id="stat-total-queries" class="fs-3 fw-bold text-white mt-1">0</div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="p-3 rounded-3 border border-secondary border-opacity-25" style="background: var(--bg-card);">
+              <div class="text-muted small fw-bold text-danger">PROMPT INJECTIONS BLOCKED</div>
+              <div id="stat-injections-blocked" class="fs-3 fw-bold text-danger mt-1">0</div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="p-3 rounded-3 border border-secondary border-opacity-25" style="background: var(--bg-card);">
+              <div class="text-muted small fw-bold text-warning">PII ENTITIES MASKED</div>
+              <div id="stat-pii-masked" class="fs-3 fw-bold text-warning mt-1">0</div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="p-3 rounded-3 border border-secondary border-opacity-25" style="background: var(--bg-card);">
+              <div class="text-muted small fw-bold text-info">SECURITY EVENTS</div>
+              <div id="stat-unauthorized" class="fs-3 fw-bold text-info mt-1">0</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Audit Log Stream Table -->
+        <div class="table-responsive rounded-3 border border-secondary border-opacity-25" style="background: var(--bg-card);">
+          <table class="table table-hover align-middle mb-0">
+            <thead>
+              <tr class="text-muted small">
+                <th>TIMESTAMP</th>
+                <th>ACTION</th>
+                <th>STATUS</th>
+                <th>USER ID</th>
+                <th>DETAILS</th>
+              </tr>
+            </thead>
+            <tbody id="audit-logs-table-body">
+              <tr><td colspan="5" class="text-center py-4 text-muted">Loading audit logs...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Upload Document Modal -->
+  <div class="modal fade" id="uploadDocumentModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content custom-modal">
+        <div class="modal-header border-secondary border-opacity-25">
+          <h5 class="modal-title fw-bold"><i class="bi bi-cloud-upload text-warning me-2"></i>Upload Banking Document</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form id="document-upload-form">
+          <div class="modal-body">
+            <div class="mb-3">
+              <label class="form-label small text-muted">DOCUMENT FILE (.PDF, .DOCX, .TXT)</label>
+              <input type="file" id="doc-file-input" class="form-control" accept=".pdf,.docx,.txt" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small text-muted">DOCUMENT NAME</label>
+              <input type="text" id="doc-name-input" class="form-control" placeholder="e.g. Commercial Loan Policy 2026" required>
+            </div>
+            <div class="row g-2 mb-3">
+              <div class="col-6">
+                <label class="form-label small text-muted">DOCUMENT TYPE</label>
+                <select id="doc-type-select" class="form-select">
+                  <option value="policy">Policy</option>
+                  <option value="sop">SOP</option>
+                  <option value="guide">Guide</option>
+                  <option value="compliance">Compliance</option>
+                </select>
+              </div>
+              <div class="col-6">
+                <label class="form-label small text-muted">CLASSIFICATION</label>
+                <select id="doc-class-select" class="form-select">
+                  <option value="internal">Internal</option>
+                  <option value="confidential">Confidential</option>
+                  <option value="restricted">Restricted</option>
+                  <option value="public">Public</option>
+                </select>
+              </div>
+            </div>
+            <div class="row g-2 mb-3">
+              <div class="col-6">
+                <label class="form-label small text-muted">DEPARTMENT</label>
+                <input type="text" id="doc-dept-input" class="form-control" placeholder="Retail Banking" value="Retail Banking">
+              </div>
+              <div class="col-6">
+                <label class="form-label small text-muted">VERSION</label>
+                <input type="text" id="doc-version-input" class="form-control" placeholder="v1.0" value="v1.0">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer border-secondary border-opacity-25">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" id="doc-upload-submit-btn" class="btn btn-warning text-dark fw-semibold">
+              Upload &amp; Vectorize Document
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Source Citation Modal -->
+  <div class="modal fade" id="citationModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content custom-modal">
+        <div class="modal-header border-secondary border-opacity-25">
+          <h6 class="modal-title fw-bold"><i class="bi bi-file-earmark-check text-warning me-2"></i><span id="citation-modal-title">Verified Source</span></h6>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div id="citation-modal-body" class="modal-body small"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/js/api.js"></script>
+  <script src="/static/js/auth.js"></script>
+  <script src="/static/js/chat.js"></script>
+  <script src="/static/js/documents.js"></script>
+  <script src="/static/js/admin.js"></script>
+
+  <script>
+    function updateThemeIcon(theme) {
+      const icon = document.getElementById('theme-icon');
+      if (icon) {
+        icon.className = theme === 'light' ? 'bi bi-moon-fill' : 'bi bi-sun';
+      }
+    }
+
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme') || 'dark';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('bankassist_theme', next);
+      updateThemeIcon(next);
+    }
+
+    function showTab(tabName) {
+      document.querySelectorAll('.nav-tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-pane-content').forEach(p => p.classList.add('d-none'));
+
+      const btn = document.getElementById(`tab-btn-${tabName}`);
+      if (btn) btn.classList.add('active');
+
+      const pane = document.getElementById(`tab-pane-${tabName}`);
+      if (pane) pane.classList.remove('d-none');
+
+      const titles = {
+        'chat': 'Banking Knowledge Assistant',
+        'documents': 'Document Repository & Vector Store',
+        'users': 'Authorized Banking Staff Directory',
+        'audit': 'Zero-Trust Security & Audit Logs'
+      };
+      document.getElementById('active-tab-title').innerText = titles[tabName] || 'BankAssist AI';
+
+      if (tabName === 'documents') DocumentsApp.loadDocuments();
+      if (tabName === 'users') AdminApp.loadUsers();
+      if (tabName === 'audit') {
+        AdminApp.loadSecurityStats();
+        AdminApp.loadAuditLogs();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      const initialTheme = localStorage.getItem('bankassist_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', initialTheme);
+      updateThemeIcon(initialTheme);
+
+      if (!Auth.checkAuth()) return;
+
+      const user = await Auth.initUser();
+      if (!user) {
+        Auth.logout();
+        return;
+      }
+
+      document.getElementById('user-display-name').innerText = user.name || user.email;
+      const roleName = user.roles && user.roles.length > 0 ? (typeof user.roles[0] === 'string' ? user.roles[0] : user.roles[0].name) : 'Staff';
+      document.getElementById('user-role-badge').innerText = roleName;
+
+      const initials = (user.name || 'BA').split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
+      document.getElementById('user-avatar-initials').innerText = initials;
+
+      ChatApp.init();
+      DocumentsApp.init();
+      AdminApp.init();
+    });
+  </script>
+</body>
+</html>

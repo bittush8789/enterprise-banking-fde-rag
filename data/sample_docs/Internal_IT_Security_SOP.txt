@@ -1,0 +1,36 @@
+# APEX GLOBAL BANK — INTERNAL IT & CYBERSECURITY OPERATIONAL STANDARD (2026)
+Document ID: DOC-SOP-ITSEC-004
+Classification: Restricted - Confidential Internal Operations
+Department: Information Security, SOC & IT Infrastructure
+Version: v1.9 (Effective 2026)
+Authorized Personnel: System Administrators, Security Engineers, IT Managers, Risk Governance
+
+---
+
+## 1. ACCESS CONTROL & IDENTITY MANAGEMENT
+Section 1.1 Password & Credential Standards:
+- Minimum length: 14 alphanumeric characters including upper, lower, numbers, and special symbols.
+- Password Expiration: Mandatory password rotation every 60 days.
+- Account Lockout Policy: 5 consecutive failed login attempts trigger automated account lockout for 30 minutes.
+- Multi-Factor Authentication (MFA): Hardware token (FIDO2) or Time-based One-Time Password (TOTP) is strictly mandatory for all Core Banking System (CBS) and administrative console logins.
+
+Section 1.2 Principle of Least Privilege (PoLP):
+- Access to production databases and customer financial records is governed by Role-Based Access Control (RBAC).
+- Administrative access rights must undergo bi-annual access attestation reviews led by the Chief Information Security Officer (CISO).
+- Shared or generic administrator accounts are strictly prohibited.
+
+## 2. DATA LOSS PREVENTION (DLP) & PII SAFEGUARDING
+Section 2.1 Customer Data Classification:
+- Personally Identifiable Information (PII) including PAN numbers, Aadhaar numbers, card numbers, account numbers, and credit reports must be encrypted at rest using AES-256 and in transit using TLS 1.3.
+- Unmasked display of full 16-digit Primary Account Numbers (PAN/Credit Card) in customer support portals is prohibited; only the last 4 digits may be visible.
+- Exporting bulk customer financial records to unencrypted USB drives or external email domains is blocked automatically by endpoint DLP agents.
+
+## 3. INCIDENT RESPONSE & BREACH NOTIFICATION
+Section 3.1 Severity Levels:
+- Severity 1 (Critical): Ransomware outbreak, active database exfiltration, unauthorized core wire routing disruption.
+- Severity 2 (High): Compromise of privileged credentials, malware on perimeter jump hosts.
+- Severity 3 (Medium): Phishing campaign targeting staff workstations, localized DDoS mitigation.
+
+Section 3.2 Escalation Timelines:
+- Critical incidents must be reported to the Head of SOC within 15 minutes of detection.
+- Regulatory Notification: Mandatory notification to CERT-In and Central Bank Cyber Cell within 6 hours of incident confirmation.

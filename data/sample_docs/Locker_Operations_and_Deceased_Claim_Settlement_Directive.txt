@@ -1,0 +1,32 @@
+# APEX GLOBAL BANK — SAFE DEPOSIT LOCKERS & DECEASED ACCOUNT SETTLEMENT DIRECTIVE (2026)
+Document ID: DOC-POL-BRANCH-012
+Classification: Internal Operations Directive
+Department: Branch Banking & Customer Redressal
+Version: v3.0 (Effective 2026)
+
+---
+
+## 1. SAFE DEPOSIT LOCKER ALLOTMENT & OPERATION
+Section 1.1 Locker Rent Matrix & Security Deposit:
+- Small Locker: Annual rent $25.00 (INR 2,000)
+- Medium Locker: Annual rent $50.00 (INR 4,000)
+- Large Locker: Annual rent $100.00 (INR 8,000)
+- Extra-Large Locker: Annual rent $200.00 (INR 15,000)
+- Caution Deposit Term Deposit: At the time of locker allotment, the bank collects a Term Deposit covering 3 years of locker rent plus breaking-open charges ($100).
+
+Section 1.2 Break-Open Procedures (Non-Operative Lockers):
+- If locker rent remains unpaid for 3 consecutive years, or if locker remains unopened for 7 years despite notices:
+  - Final 30-day registered notice dispatched to customer.
+  - Break-open conducted in the presence of Branch Manager, 2 independent public witnesses, and a certified locksmith.
+  - Inventory video-recorded and sealed in safe custody.
+
+## 2. DECEASED DEPOSITOR CLAIM SETTLEMENT
+Section 2.1 Accounts with Valid Nomination or Survivorship Mandate (Either or Survivor):
+- Turnaround Time (SLA): Full settlement and disbursement within 15 calendar days from receipt of claim form, death certificate, and KYC of nominee/survivor.
+- No Succession Certificate or Legal Heirship proof shall be insisted upon for registered nominee cases.
+
+Section 2.2 Accounts WITHOUT Nomination:
+- Threshold Limit up to $15,000 (INR 5,00,000):
+  - Settled through Simplified Claim Procedure against Letter of Indemnity, Affidavit from legal heirs, and 2 independent sureties acceptable to the bank.
+- Threshold Limit exceeding $15,000:
+  - Requires Succession Certificate issued by a competent Civil Court, or Probated Will with Letter of Administration.

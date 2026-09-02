@@ -1,0 +1,37 @@
+# APEX GLOBAL BANK — PERSONAL & EDUCATION LOAN UNDERWRITING POLICY (2026)
+Document ID: DOC-POL-RETAIL-010
+Classification: Internal - Retail Credit Guidelines
+Department: Unsecured Retail Lending & Education Financing
+Version: v3.4 (Effective 2026)
+
+---
+
+## 1. UNSECURED PERSONAL LOANS
+Section 1.1 Eligibility Prerequisite:
+- Target Borrowers: Salaried corporate employees, self-employed professionals (Doctors, CAs, Architects).
+- Age Bracket: Minimum 21 years; maximum 58 years (or retirement age).
+- Minimum Net Monthly Salary: $2,000.00 (or INR 35,000) credited directly to a bank account for >= 6 consecutive months.
+- Minimum Credit Score: CIBIL score >= 720 (Experian >= 750).
+
+Section 1.2 Loan Quantum & Interest Matrix:
+- Loan Range: Minimum $1,500 up to maximum $50,000 (capped at 10x net monthly salary).
+- Repayment Tenor: 12 months to 60 months (5 years) in equated monthly installments (EMI).
+- Baseline Interest Rate: 10.50% to 14.75% p.a. fixed on reducing balance.
+- Processing Fee: 1.00% to 2.00% of loan amount + applicable taxes.
+- Foreclosure & Prepayment: 0% foreclosure penalty after completion of 12 regular monthly installments.
+
+## 2. HIGHER EDUCATION FINANCING SCHEME
+Section 2.1 Domestic & Overseas Loan Limits:
+- Domestic Higher Education: Up to $100,000 (INR 75 Lakhs) for accredited universities (Engineering, Medicine, Management, Law).
+- Global Premier University Scheme (Overseas): Up to $250,000 (INR 1.5 Crores) for QS World Top 200 ranked institutions (USA, UK, Canada, Australia, Germany, Singapore).
+
+Section 2.2 Margin Money & Security Structure:
+- Up to $10,000: 0% borrower margin.
+- Above $10,000 (Domestic): 5% borrower margin.
+- Above $10,000 (Studies Abroad): 15% borrower margin.
+- Collateral Benchmark: Loans above $25,000 require tangible collateral (residential property, commercial real estate, or 100% FD lien) covering 100% of loan quantum.
+
+Section 2.3 Moratorium & Repayment Holiday:
+- Moratorium Period: Course duration + 12 months (or 6 months after securing employment, whichever is earlier).
+- Maximum Repayment Tenure: Up to 15 years (180 months) excluding the moratorium period.
+- Interest Subsidy: Central Sector Interest Subsidy (CSIS) available for economically weaker section students (annual parental income <= $5,500 / INR 4.5 Lakhs).

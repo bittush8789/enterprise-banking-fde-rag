@@ -1,0 +1,36 @@
+# APEX GLOBAL BANK — COMMERCIAL LENDING & MSME BUSINESS FINANCING DIRECTIVE (2026)
+Document ID: DOC-POL-MSME-006
+Classification: Confidential - Internal Credit Policy
+Department: Commercial Banking & SME Credit Underwriting
+Version: v2.8 (Effective 2026)
+
+---
+
+## 1. FACILITY TYPES & SCOPE
+Apex Global Bank provides fund-based and non-fund-based credit lines to micro, small, and medium enterprises (MSME) and commercial enterprises:
+1. Working Capital Limits: Cash Credit (CC) against hypothecation of stock/debtors, Overdraft (OD), and Export Credit.
+2. Term Loans: Plant and machinery acquisition, factory land/building development, commercial vehicle loans.
+3. Non-Fund Facilities: Letters of Credit (Inland & Foreign LC) and Bank Guarantees (Financial & Performance BG).
+
+## 2. FINANCIAL RATIOS & UNDERWRITING BENCHMARKS
+Section 2.1 Mandatory Financial Health Thresholds:
+- Debt Service Coverage Ratio (DSCR): Minimum benchmark DSCR is 1.25x across the loan tenure; ideal average DSCR >= 1.50x.
+- Current Ratio (Liquidity): Minimum 1.33:1 (Current Assets to Current Liabilities).
+- Total Outside Liabilities to Adjusted Tangible Net Worth (TOL/ATNW): Capped at maximum 4.0:1 for manufacturing; 3.5:1 for trading.
+- Interest Coverage Ratio (ICR): Minimum benchmark >= 2.0x EBITDA.
+
+Section 2.2 Collateral-Free MSME Credit (Credit Guarantee Scheme):
+- Micro & Small Enterprises with annual revenue up to $5,000,000 qualify for collateral-free credit facilities up to $250,000 (INR 2.0 Crores) under the Central Credit Guarantee Trust (CGTMSE).
+- Annual Guarantee Fee: 0.75% to 1.35% p.a. borne by the borrower based on risk grading.
+
+## 3. APPRAISAL & DRAWING POWER (DP) CALCULATION
+- Drawing Power on Paid Stock: Inventory valuation minus 25% mandatory borrower margin.
+- Drawing Power on Book Debts: Eligible book debts up to 90 days from invoice date minus 30% margin. Receivables outstanding beyond 90 days are strictly excluded from DP.
+- Monthly Stock Statements: Must be submitted by the 7th calendar day of each subsequent month. Failure to submit within 15 days results in a penal interest levy of 2.0% p.a. and temporary freeze of drawing power.
+
+## 4. LOAN TENURE, MORATORIUM & SECURITY REQUIREMENTS
+- Working Capital Review: Sanctioned for 12 months, subject to annual audited renewal.
+- Term Loan Maximum Tenure: Up to 10 years (120 months) including a principal repayment moratorium of up to 12 months for greenfield industrial units.
+- Primary Security: First pari-passu charge on all funded current assets and fixed assets.
+- Collateral Security (for non-guaranteed facilities): Minimum 50% to 100% SARFAESI-compliant immovable commercial or residential property.
+- Personal Guarantee: Unconditional personal guarantees of all directors, promoters, and majority equity shareholders holding > 10% equity.

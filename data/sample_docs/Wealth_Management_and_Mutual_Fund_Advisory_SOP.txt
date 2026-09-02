@@ -1,0 +1,32 @@
+# APEX GLOBAL BANK — WEALTH MANAGEMENT, MUTUAL FUNDS & GOLD SOVEREIGN BONDS SOP (2026)
+Document ID: DOC-POL-WEALTH-009
+Classification: Internal Advisory Standard
+Department: Wealth Management & Private Banking
+Version: v2.5 (Effective 2026)
+
+---
+
+## 1. CLIENT RISK PROFILING & SUITABILITY MATRIX
+Section 1.1 Risk Categories:
+Every retail wealth client must complete a mandatory Risk Assessment Questionnaire (valid for 12 months) before executing investment trades:
+1. Conservative Investor (Score 1-3): Capital preservation focus. Maximum equity exposure capped at 20%; 80% allocation in Sovereign Gold Bonds, Government Debt, AAA Fixed Deposits.
+2. Moderate Investor (Score 4-7): Balanced growth. Equity exposure up to 50%; 50% in Debt and Hybrid Multi-Asset Funds.
+3. Aggressive Investor (Score 8-10): Capital appreciation. Up to 100% in Large/Mid/Small Cap Equity, Thematic Funds, and Alternative Investment Funds (AIF).
+
+## 2. MUTUAL FUND SIP & PORTFOLIO MANAGEMENT SERVICES (PMS)
+Section 2.1 Systematic Investment Plans (SIP):
+- Minimum SIP Amount: $6.00 (INR 500) per month.
+- SIP Auto-Debit Facilities: Available via National Automated Clearing House (NACH) on the 1st, 5th, 10th, 15th, 20th, and 25th of each month.
+- Exit Load Thresholds: Most equity funds levy 1.0% exit load if redeemed within 365 days; 0% thereafter.
+
+Section 2.2 Portfolio Management Services (PMS):
+- Minimum Regulatory Investment Ticket: $60,000 (INR 50 Lakhs) for Discretionary and Non-Discretionary PMS mandates.
+- Management Fee: 1.50% to 2.25% p.a. AUM with high-water mark performance hurdles.
+
+## 3. SOVEREIGN GOLD BONDS (SGB) & GOLD MONETIZATION
+Section 3.1 Sovereign Gold Bond (SGB) Features:
+- Issuer: Central Bank / Government Sovereign Guarantee.
+- Interest Rate: Fixed 2.50% per annum paid semi-annually on the initial nominal investment value.
+- Bond Tenor: 8 years with premature exit options after the 5th, 6th, and 7th year on coupon payment dates.
+- Capital Gains Tax Exemption: 100% tax-free on long-term capital gains if held until maturity (8 years).
+- Individual Investor Quota: Minimum 1 gram; maximum 4 Kilograms per individual per fiscal year.

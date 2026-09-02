@@ -1,0 +1,31 @@
+# APEX GLOBAL BANK — TRADE FINANCE, LETTERS OF CREDIT (LC) & BANK GUARANTEES (BG) MANUAL (2026)
+Document ID: DOC-POL-TRADE-011
+Classification: Confidential - Trade Operations Standard
+Department: International Trade Services & Structured Finance
+Version: v4.2 (Effective 2026)
+
+---
+
+## 1. DOCUMENTARY LETTERS OF CREDIT (LC)
+Section 1.1 Regulatory Standards & Types:
+- All documentary credits issued by Apex Global Bank operate strictly under ICC Uniform Customs and Practice for Documentary Credits (UCP 600) and ISBP 745.
+- Permissible LC Variants: Irrevocable Confirmed LC, Sight LC, Usance (Deferred Payment) LC, Transferable LC, Revolving LC, and Standby Letters of Credit (SBLC).
+
+Section 1.2 Presentation Timelines & Examination SLA:
+- Document Presentation Window: Beneficiary must present required shipping documents (Commercial Invoice, Bill of Lading, Certificate of Origin, Insurance) within 21 calendar days from date of shipment, but within LC validity.
+- Document Examination SLA: Trade Operations division must complete compliance examination and communicate discrepancy notices within 5 banking days of document receipt.
+- Discrepancy Charges: $75.00 flat per discrepant presentation deducted from beneficiary proceeds.
+
+## 2. BANK GUARANTEES (BG) & SURETY BONDS
+Section 2.1 BG Classifications:
+1. Financial Bank Guarantees: Issued in lieu of security deposits, earnest money (EMD), or loan repayment guarantees (Cash margin: 15% to 25%).
+2. Performance Bank Guarantees: Issued in favor of project owners/government departments for fulfillment of contractual obligations (Cash margin: 10% to 20%).
+
+Section 2.2 Invocation & Claim Period Mandate:
+- Standard BG Validity: Specified contract period + mandatory 12-month claim lodgment period under Section 28 of the Indian Contract Act.
+- Invocation Processing: When an unconditional invocation letter is received from the beneficiary prior to expiry of claim period, payment must be honored within 48 hours without raising commercial dispute defenses.
+
+## 3. MARGIN STRUCTURE & COLLATERAL COVERAGE
+- Baseline Cash Margin: 10% to 25% earmarked as Term Deposit with restrictive lien.
+- 100% Margin Concession: 0.15% per quarter issuance fee if backed 100% by Apex Bank Term Deposit.
+- Commission Schedule: 0.40% to 0.75% per quarter on non-deposit secured guarantees.

@@ -1,0 +1,44 @@
+# APEX GLOBAL BANK — FOREIGN EXCHANGE & CROSS-BORDER REMITTANCE SOP (2026)
+Document ID: DOC-POL-FOREX-008
+Classification: Internal Operations & Customer Advisory
+Department: Treasury & International Trade Operations
+Version: v3.1 (Effective 2026)
+
+---
+
+## 1. LIBERALIZED REMITTANCE SCHEME (LRS)
+Section 1.1 Permissible Limits & Eligibility:
+- Resident Individual Annual Ceiling: Up to $250,000 USD (or equivalent in permitted foreign currencies) per financial year (April 1 to March 31).
+- Eligible Purposes:
+  1. Overseas education and student living expenses.
+  2. Medical treatment abroad and attendant accommodation expenses.
+  3. Private travel / tourist visits abroad (max $250,000 per FY).
+  4. Gift or financial maintenance to close relatives residing overseas.
+  5. Capital account transactions (foreign equity, mutual fund shares, immovable property acquisition).
+- Prohibited Remittances: Remittances for trading in foreign exchange, lottery/gambling tickets, or purchase of FCCBs/prohibited commodities are strictly banned.
+
+## 2. TAX COLLECTED AT SOURCE (TCS) RATES
+Section 2.1 Applicable TCS Matrix (Finance Act Regulations):
+- Overseas Education (funded through educational loan from approved bank):
+  - Amount up to $8,500 (INR 7 Lakhs): 0% TCS.
+  - Amount above $8,500 (INR 7 Lakhs): 0.50% TCS.
+- Overseas Education & Medical Treatment (self-funded):
+  - Amount up to $8,500: 0% TCS.
+  - Amount above $8,500: 5.0% TCS.
+- Overseas Tour Packages:
+  - Up to $8,500: 5.0% TCS.
+  - Above $8,500: 20.0% TCS.
+- Other Remittances (Investments, Gifts, Real Estate, Offshore Maintenance):
+  - Up to $8,500: 0% TCS.
+  - Above $8,500: 20.0% TCS.
+
+## 3. DOCUMENTATION & WIRE TRANSFER SLA
+Section 3.1 Mandatory Outward Remittance Documents:
+1. Form A2 with signed declaration under FEMA (Foreign Exchange Management Act).
+2. Permanent Account Number (PAN Card) mandatory for all LRS transactions.
+3. Form 15CA and Chartered Accountant Certificate 15CB for taxable overseas payments.
+4. Valid invoice / university admission offer letter / medical diagnosis certificate.
+
+Section 3.2 Settlement Protocols:
+- Nostro Settlement via SWIFT MT103 / ISO 20022 messaging.
+- Processing Turnaround Time: Outward remittances submitted before 13:00 local time are processed Same Day (T+0); later submissions are processed on the next business day (T+1).

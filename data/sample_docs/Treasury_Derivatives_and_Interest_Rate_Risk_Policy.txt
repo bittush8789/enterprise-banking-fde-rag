@@ -1,0 +1,26 @@
+# APEX GLOBAL BANK — TREASURY DERIVATIVES & MARKET RISK MANAGEMENT POLICY (2026)
+Document ID: DOC-POL-TREASURY-013
+Classification: Confidential - Asset Liability Management
+Department: Integrated Treasury & Market Risk Control
+Version: v2.9 (Effective 2026)
+
+---
+
+## 1. PERMISSIBLE TREASURY & DERIVATIVE INSTRUMENTS
+Section 1.1 Authorized Products:
+Apex Global Bank trades and hedges interest rate and forex risk using approved instruments:
+1. Rupee Interest Rate Swaps (IRS): Overnight Indexed Swaps (OIS) referenced against MIBOR.
+2. Forward Rate Agreements (FRA) and Cross-Currency Interest Rate Swaps (CCIRS).
+3. Plain Vanilla Foreign Currency Options (Call/Put) and USD/INR Currency Futures.
+4. Structured derivatives with leveraged payoffs or dual-currency trigger caps are strictly prohibited for non-institutional retail clients.
+
+## 2. MARKET RISK LIMITS & VALUE AT RISK (VaR)
+Section 2.1 Value at Risk (VaR) Benchmark:
+- 1-Day Holding Period Value at Risk (VaR) is computed at the 99.0% statistical confidence level using historical simulation across 250 trading days.
+- Aggregate Bank Treasury VaR Limit: Capped at $2,500,000 across all asset classes.
+- PV01 (Price Value of a Basis Point) Limit: Maximum portfolio sensitivity of $75,000 per 1 basis point shift in the sovereign yield curve.
+
+Section 2.2 Net Open Overnight Position Limit (NOOPL):
+- Maximum overnight foreign exchange open position is capped at $5,000,000 USD equivalent.
+- Intraday Daylight Limit: Capped at $12,000,000 USD equivalent.
+- Stop-Loss Breach Protocol: If daily trading draw-down exceeds $250,000, all open trading desks must halt new position opening and notify the Head of Treasury Risk immediately.

@@ -1,0 +1,50 @@
+# APEX GLOBAL BANK — CREDIT CARD ISSUANCE, REWARDS & DISPUTE POLICY (2026)
+Document ID: DOC-POL-CARD-005
+Classification: Internal - Customer Facing Guidelines
+Department: Cards & Digital Payments Division
+Version: v3.2 (Effective 2026)
+
+---
+
+## 1. CREDIT CARD VARIANTS & ELIGIBILITY
+Section 1.1 Card Variants & Annual Fees:
+- Apex Titanium Card:
+  - Annual Fee: $40 (Waived on annual spend >= $1,500).
+  - Minimum Annual Income: $25,000 salaried.
+  - Baseline APR: 3.50% per month (42.0% p.a.) on revolving unpaid balances.
+- Apex Platinum Rewards Card:
+  - Annual Fee: $100 (Waived on annual spend >= $3,500).
+  - Minimum Annual Income: $60,000.
+  - Complimentary Airport Lounge Access: 4 domestic visits per calendar quarter.
+- Apex Infinite Metal Card:
+  - Annual Fee: $350 (Non-waivable; includes $300 welcome travel voucher).
+  - Minimum Annual Income: $150,000 or Total Relationship Value >= $100,000.
+  - Unlimited Global Lounge Key access with 1 complimentary guest visit.
+
+Section 1.2 Cash Advance & Over-Limit Charges:
+- ATM Cash Advance Fee: 2.50% of withdrawn amount or minimum $10.00, whichever is higher. Interest accrues immediately from the transaction date (no grace period).
+- Over-Limit Fee: 2.50% of the over-limit quantum, subject to a minimum charge of $15.00.
+
+## 2. REWARD POINTS (RP) ACCRUAL & REDEMPTION
+- Accrual Rate: 2 Reward Points per $1.00 spent on Titanium; 5 Reward Points per $1.00 spent on Platinum/Infinite.
+- 10X Accelerated Reward Categories: International travel, dining, and registered online subscription services.
+- Point Expiration: Reward points remain valid for 24 months from the month of accrual.
+- Redemption Value:
+  - Air Miles / Hotel Conversions: 1 Reward Point = $0.25 credit.
+  - Statement Cash Credit: 1 Reward Point = $0.15 credit.
+  - Merchandise / Gift Vouchers: 1 Reward Point = $0.20 credit.
+
+## 3. BILLING CYCLES, GRACE PERIODS & LATE FEES
+- Interest-Free Grace Period: Up to 50 days (applicable only if previous cycle statement balance was paid in full by due date).
+- Minimum Amount Due (MAD): 5.0% of total statement balance + EMI installments + applicable government taxes.
+- Late Payment Charges:
+  - Statement balance up to $100: $0 (Grace fee exemption).
+  - $101 to $500: $15.00 late fee.
+  - $501 to $2,000: $30.00 late fee.
+  - Greater than $2,000: $50.00 late fee.
+
+## 4. CHARGEBACK & TRANSACTION DISPUTE RESOLUTION
+Section 4.1 Dispute Reporting Timelines:
+- Cardholders must notify the bank within 60 calendar days from the statement date regarding unauthorized transactions, merchant double-billing, or defective merchandise.
+- Provisional Credit: Apex Bank provides provisional statement credit within 7 business days pending final card network arbitration (Visa/Mastercard/RuPay).
+- Investigation Resolution SLA: Standard domestic chargebacks resolve within 45 days; complex international disputes resolve within 90 days.
