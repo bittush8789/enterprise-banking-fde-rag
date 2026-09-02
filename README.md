@@ -10,6 +10,7 @@
   <a href="https://groq.com/"><img src="https://img.shields.io/badge/LLM-Groq%20Qwen%203.6--27B-F55036.svg?logo=openai&logoColor=white" alt="Groq Qwen" /></a>
   <a href="https://www.pinecone.io/"><img src="https://img.shields.io/badge/Vector%20Store-Pinecone%20Serverless-000000.svg?logo=pinecone&logoColor=white" alt="Pinecone" /></a>
   <a href="https://www.mysql.com/"><img src="https://img.shields.io/badge/Database-MySQL%208.0%20%2F%20SQLite-4479A1.svg?logo=mysql&logoColor=white" alt="Database" /></a>
+  <a href="https://kubernetes.io/"><img src="https://img.shields.io/badge/Kubernetes-AWS%20EKS-326CE5.svg?logo=kubernetes&logoColor=white" alt="Kubernetes" /></a>
   <a href="https://docs.pytest.org/"><img src="https://img.shields.io/badge/Tests-15%2F15%20Passed%20(100%25)-4CAF50.svg?logo=pytest&logoColor=white" alt="Pytest" /></a>
   <a href="./LICENSE"><img src="https://img.shields.io/badge/License-Proprietary%20%2F%20Enterprise-blue.svg" alt="License" /></a>
 </p>
@@ -28,6 +29,7 @@
 - [Quick Start Guide](#-quick-start-guide)
   - [Option A: Local Development Launch](#option-a-local-development-launch)
   - [Option B: Full Docker Compose Deployment](#option-b-full-docker-compose-deployment)
+  - [Option C: Production Deployment on AWS EKS](#option-c-production-deployment-on-aws-eks)
 - [Default User Credentials](#-default-user-credentials)
 - [REST API Reference](#-rest-api-reference)
 - [UAT Runbook & Automated Test Suite](#-uat-runbook--automated-test-suite)
@@ -217,20 +219,44 @@ data/sample_docs/
 
 ### Option B: Full Docker Compose Deployment
 
-Spin up MySQL 8.0, ChromaDB vector server container, and the FastAPI application in isolated network containers:
+Spin up MySQL 8.0 and the FastAPI application connected to Pinecone:
 
 ```bash
 docker-compose up --build -d
 ```
 
 - **Application Web Portal**: [http://localhost:8000](http://localhost:8000)
-- **ChromaDB Vector Server API**: [http://localhost:8001](http://localhost:8001)
-- **Interactive Swagger Documentation**: [http://localhost:8000/docs](http://localhost:8000/docs)
 
 To stop the containers:
 ```bash
 docker-compose down
 ```
+
+---
+
+### Option C: Production Deployment on AWS EKS
+
+Deploy BankAssist AI with Pinecone Serverless Vector DB, MySQL PVC persistence, AWS Application Load Balancer (ALB), and Horizontal Pod Autoscaling (HPA) to **Amazon Elastic Kubernetes Service (AWS EKS)**:
+
+```bash
+# 1. Apply Namespace, ConfigMap & Secrets
+kubectl apply -f k8s/namespace.yaml
+kubectl apply -f k8s/configmap.yaml
+kubectl apply -f k8s/secret.yaml
+
+# 2. Deploy MySQL Storage & Service
+kubectl apply -f k8s/mysql-pvc.yaml
+kubectl apply -f k8s/mysql-deployment.yaml
+kubectl apply -f k8s/mysql-service.yaml
+
+# 3. Deploy Backend, AWS ALB Ingress & HPA
+kubectl apply -f k8s/backend-deployment.yaml
+kubectl apply -f k8s/backend-service.yaml
+kubectl apply -f k8s/ingress.yaml
+kubectl apply -f k8s/hpa.yaml
+```
+
+📖 *For full step-by-step ECR build, IAM OIDC setup, and AWS Load Balancer Controller installation, refer to [k8s/eks-deployment-guide.md](file:///d:/%F0%9F%8F%A6%20MASTER%20PROMPT%20%E2%80%94%20Build%20BankAssist%20AI/k8s/eks-deployment-guide.md).*
 
 ---
 

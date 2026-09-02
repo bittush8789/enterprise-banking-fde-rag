@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: bankassist-config
+  namespace: bankassist-ai
+  labels:
+    app.kubernetes.io/name: bankassist-backend
+    app.kubernetes.io/part-of: bankassist-ai
+data:
+  ENVIRONMENT: "production"
+  GROQ_MODEL: "qwen/qwen3.6-27b"
+  PINECONE_INDEX_NAME: "bankassist-banking-docs"
+  PINECONE_ENVIRONMENT: "us-east-1"
+  PINECONE_CLOUD: "aws"
+  PINECONE_REGION: "us-east-1"
+  MYSQL_HOST: "bankassist-mysql"
+  MYSQL_PORT: "3306"
+  MYSQL_DATABASE: "bankassist"
+  MYSQL_USER: "root"
+  EMBEDDING_MODEL: "BAAI/bge-small-en-v1.5"
+  RETRIEVAL_THRESHOLD: "0.15"
+  CHUNK_SIZE: "1000"
+  CHUNK_OVERLAP: "200"
+  TOP_K: "4"

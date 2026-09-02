@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: bankassist-ai
+  labels:
+    app.kubernetes.io/name: bankassist-ai
+    app.kubernetes.io/part-of: enterprise-banking-fde-rag
+    environment: production

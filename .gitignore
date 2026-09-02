@@ -25,6 +25,9 @@ venv/
 ENV/
 .env
 
+# Kubernetes Secrets
+k8s/secret.yaml
+
 # Chroma & Storage
 data/chroma_db/
 data/uploads/*

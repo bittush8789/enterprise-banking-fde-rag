@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mysql-pvc
+  namespace: bankassist-ai
+  labels:
+    app.kubernetes.io/name: bankassist-mysql
+    app.kubernetes.io/part-of: bankassist-ai
+spec:
+  accessModes:
+    - ReadWriteOnce
+  # On AWS EKS, gp3 / gp2 or standard is typically available
+  # storageClassName: gp3
+  resources:
+    requests:
+      storage: 20Gi
