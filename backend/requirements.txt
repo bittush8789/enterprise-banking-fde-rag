@@ -11,7 +11,7 @@ bcrypt>=4.0.0
 python-multipart>=0.0.9
 
 # Vector DB & Embeddings
-chromadb>=0.4.24
+pinecone>=5.0.0
 sentence-transformers>=2.5.0
 huggingface-hub>=0.21.0
 

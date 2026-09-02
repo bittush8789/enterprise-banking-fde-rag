@@ -80,11 +80,11 @@ const DocumentsApp = {
     formData.append("allowed_roles", JSON.stringify(["LOAN_OFFICER", "COMPLIANCE_OFFICER", "CUSTOMER_SUPPORT", "MANAGER", "ADMIN"]));
 
     submitBtn.disabled = true;
-    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Extracting & Indexing into ChromaDB...';
+    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Extracting & Indexing into Pinecone...';
 
     try {
       const result = await BankAPI.uploadDocument(formData);
-      alert(`Success! Document "${result.document_name}" indexed successfully with ${result.chunks_count} chunks.`);
+      alert(`Success! Document "${result.document_name}" indexed successfully with ${result.chunks_count} chunks into Pinecone.`);
       
       const modalEl = document.getElementById("uploadDocumentModal");
       const modal = bootstrap.Modal.getInstance(modalEl);
@@ -101,7 +101,7 @@ const DocumentsApp = {
   },
 
   async deleteDocument(id, name) {
-    if (!confirm(`Are you sure you want to permanently delete document "${name}" and purge all its chunks from ChromaDB?`)) {
+    if (!confirm(`Are you sure you want to permanently delete document "${name}" and purge all its chunks from Pinecone?`)) {
       return;
     }
 

@@ -29,9 +29,11 @@ class Settings(BaseSettings):
 
     # RAG & Embedding Settings
     EMBEDDING_MODEL: str = "BAAI/bge-small-en-v1.5"
-    CHROMA_PERSIST_DIRECTORY: str = "./data/chroma_db"
-    CHROMA_SERVER_HOST: Optional[str] = None
-    CHROMA_SERVER_PORT: int = 8000
+    PINECONE_API_KEY: Optional[str] = None
+    PINECONE_INDEX_NAME: str = "bankassist-banking-docs"
+    PINECONE_ENVIRONMENT: str = "us-east-1"
+    PINECONE_CLOUD: str = "aws"
+    PINECONE_REGION: str = "us-east-1"
     RETRIEVAL_THRESHOLD: float = 0.20
     CHUNK_SIZE: int = 1000
     CHUNK_OVERLAP: int = 200
@@ -59,5 +61,4 @@ settings = Settings()
 
 # Ensure required directories exist
 os.makedirs(settings.UPLOAD_DIRECTORY, exist_ok=True)
-os.makedirs(settings.CHROMA_PERSIST_DIRECTORY, exist_ok=True)
 os.makedirs("./data/sample_docs", exist_ok=True)

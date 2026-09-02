@@ -8,7 +8,7 @@
   <a href="https://fastapi.tiangolo.com/"><img src="https://img.shields.io/badge/FastAPI-0.109.0-009688.svg?logo=fastapi&logoColor=white" alt="FastAPI" /></a>
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10%20|%203.11%20|%203.12%20|%203.13-3776AB.svg?logo=python&logoColor=white" alt="Python Version" /></a>
   <a href="https://groq.com/"><img src="https://img.shields.io/badge/LLM-Groq%20Qwen%203.6--27B-F55036.svg?logo=openai&logoColor=white" alt="Groq Qwen" /></a>
-  <a href="https://www.trychroma.com/"><img src="https://img.shields.io/badge/Vector%20Store-ChromaDB%20Docker-FF6F00.svg?logo=docker&logoColor=white" alt="ChromaDB" /></a>
+  <a href="https://www.pinecone.io/"><img src="https://img.shields.io/badge/Vector%20Store-Pinecone%20Serverless-000000.svg?logo=pinecone&logoColor=white" alt="Pinecone" /></a>
   <a href="https://www.mysql.com/"><img src="https://img.shields.io/badge/Database-MySQL%208.0%20%2F%20SQLite-4479A1.svg?logo=mysql&logoColor=white" alt="Database" /></a>
   <a href="https://docs.pytest.org/"><img src="https://img.shields.io/badge/Tests-15%2F15%20Passed%20(100%25)-4CAF50.svg?logo=pytest&logoColor=white" alt="Pytest" /></a>
   <a href="./LICENSE"><img src="https://img.shields.io/badge/License-Proprietary%20%2F%20Enterprise-blue.svg" alt="License" /></a>
@@ -95,7 +95,7 @@ flowchart TB
     subgraph RAGPipeline ["3. RAG Pipeline & Vector Engine"]
         Chunker["Recursive Character Chunker\n(Chunk Size: 1000 | Overlap: 200)"]
         Embeddings["BGE Small Embeddings\n(BAAI/bge-small-en-v1.5 + Deterministic Fallback)"]
-        ChromaContainer["ChromaDB Vector Store\n(Dockerized / Remote HttpClient / Local Persistence)"]
+        PineconeStore["Pinecone Serverless Vector Index\n(bankassist-banking-docs | Cosine Metric)"]
         Retriever["Semantic Vector Retriever\n(Cosine Similarity Threshold: 0.15)"]
     end
 
@@ -114,7 +114,7 @@ flowchart TB
     Auth_JWT --> PII_In
     PII_In --> Inj_Guard
     Inj_Guard --> Retriever
-    Retriever <--> ChromaContainer
+    Retriever <--> PineconeStore
     Retriever --> PromptEngine
     PromptEngine --> Groq_API
     Groq_API --> ReasoningFilter
@@ -131,12 +131,12 @@ flowchart TB
 - **Deep LLM Reasoning Powered by Groq**: Integrated with Groq's high-speed inference engine using `qwen/qwen3.6-27b` (with automatic fallback to grounded deterministic extraction).
 - **Multi-Tab Enterprise Dashboard**:
   - 💬 **Knowledge Assistant**: Interactive multi-session chat with starter suggestion chips, citation badges, and a clause inspector modal.
-  - 📁 **Document Repository**: Document inventory, vector status badges, delete capabilities, and an upload modal with real-time text extraction and ChromaDB indexing.
+  - 📁 **Document Repository**: Document inventory, vector status badges, delete capabilities, and an upload modal with real-time text extraction and Pinecone vector indexing.
   - 👥 **User Directory**: Directory of banking employees and system permissions.
   - 🛡️ **Zero-Trust Security & Audit Logs**: Real-time KPI telemetry cards (*Total Queries, Prompt Injections Blocked, PII Entities Masked, Security Events*) and an immutable audit log stream.
 - **Light & Dark Theme Switcher**: Instant ☀️ Sun / 🌙 Moon mode switcher with persistent state across sessions.
-- **Hybrid Vector Store Architecture**: Seamlessly connects to a dedicated Dockerized ChromaDB container via `HttpClient`, with automatic local `PersistentClient` fallback.
-- **Containerized Deployment**: Production-ready `docker-compose.yml` orchestrating MySQL 8.0, ChromaDB, and the FastAPI application.
+- **Pinecone Serverless Vector Architecture**: Serverless cloud vector index with zero infrastructure management and high-throughput vector search.
+- **Containerized Deployment**: Production-ready `docker-compose.yml` orchestrating MySQL 8.0 and the FastAPI application.
 
 ---
 
